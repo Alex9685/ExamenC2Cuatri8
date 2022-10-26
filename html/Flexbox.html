@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos2.css">
+    <title>Mi pagina con flex-box</title>
+</head>
+<body>
+    <header>
+        <h1>Examen Corte II</h1>
+    </header>
+    <section>
+        <input type="text" placeholder="Cantidad" id="cantidad" name="cantidad">
+        <select name="opciones" id="opciones ">
+            <option value="1">Peso Mexicano</option>
+            <option value="2">Dólar estadounidense</option>
+            <option value="3">Dólar canadiense</option>
+            <option value="4">Euro</option>
+        </select>
+        <select name="opciones2" id="opciones2">
+            <option value="1">.........</option>
+            <option value="2">.........</option>
+            <option value="3">.........</option>
+        </select>
+        <input type="text" placeholder="Subtotal" readonly="readonly" id="subTotal" name="subTotal" > 
+        <input type="text" placeholder="Total Comision" readonly="readonly" id="totalComision" name="totalComision">
+        <input type="text" placeholder="Total a Pagar" readonly="readonly" id="totalPagar" name="totalPagar">
+        <button id="btnCalcular" onclick="Calcular()">Calcular</button>
+        <button id="btnRegisto" onclick="Registo()">Registro</button>
+
+        <br><br><br><br><br>
+        <center>
+            <h2>Registros Realizados</h2>
+            <p id="tabla" name="tabla">:D</p>
+        </center>
+       
+    </section>
+
+    <footer><h3>Derechos reservados Octubre 2022</h3></footer>
+</body>
+</html>
