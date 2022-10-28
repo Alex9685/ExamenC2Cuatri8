@@ -115,4 +115,27 @@ function Mover(Origen){
         document.getElementById('totalPagar').value=total;
     
     }
+
+    var acumulado=0;
+    function Registro(){
+        let acumular=document.getElementById('totalPagar').value;
+        let parrafo=document.getElementById('tabla');
+        let totg= document.getElementById('TotGeneral');
+        
+        let parrafo2;
+        var seleccionada = document.getElementById('opOrigen')[document.getElementById('opOrigen').selectedIndex].text;
+        var seleccionada2 = document.getElementById('opDestino')[document.getElementById('opDestino').selectedIndex].text;
+        let subtotal=document.getElementById('subTotal').value;
+        let comision=document.getElementById('totalComision').value;
+        let total=document.getElementById('totalPagar').value;
+        let cantidad= document.getElementById('cantidad').value;
+        parrafo2=cantidad + " " + seleccionada + " a " + seleccionada2 + " " + subtotal + " "
+        + comision + " " + total + "<br>";
+        parrafo.innerHTML= parrafo.innerHTML + parrafo2;
+    
+        acumulado=  parseFloat(acumular) + acumulado ;
+        totg.innerText=acumulado;
+    }
+    
+
    
