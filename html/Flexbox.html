@@ -6,34 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/estilos2.css">
     <title>Mi pagina con flex-box</title>
+    <script src="/js/examen.js"></script>
 </head>
 <body>
     <header>
         <h1>Examen Corte II</h1>
     </header>
     <section>
-        <input type="text" placeholder="Cantidad" id="cantidad" name="cantidad">
-        <select name="opciones" id="opciones ">
+        <center>
+        <input type="text" placeholder="cantidad" id="cantidad" name="cantidad" >
+        <select name="opOrigen" id="opOrigen" onchange="Mover(this)">
+            <option value="">Seleccione una opcion</option>
             <option value="1">Peso Mexicano</option>
-            <option value="2">Dólar estadounidense</option>
-            <option value="3">Dólar canadiense</option>
+            <option value="2">Dolar estadounidense</option>
+            <option value="3">Dolar canadiense</option>
             <option value="4">Euro</option>
         </select>
-        <select name="opciones2" id="opciones2">
-            <option value="1">.........</option>
-            <option value="2">.........</option>
-            <option value="3">.........</option>
+        <select  name="opDestino" id="opDestino">
+            <option value="">Moneda a convertir </option>
+            <option value="4">Euro</option>
+            <option value="1">Peso Mexicano</option>
+            <option value="2">Dolar Estadounidense</option>
         </select>
         <input type="text" placeholder="Subtotal" readonly="readonly" id="subTotal" name="subTotal" > 
         <input type="text" placeholder="Total Comision" readonly="readonly" id="totalComision" name="totalComision">
         <input type="text" placeholder="Total a Pagar" readonly="readonly" id="totalPagar" name="totalPagar">
         <button id="btnCalcular" onclick="Calcular()">Calcular</button>
-        <button id="btnRegisto" onclick="Registo()">Registro</button>
-
+        <button id="btnRegisto" onclick="Registro()">Registro</button>
+        </center>
         <br><br><br><br><br>
         <center>
             <h2>Registros Realizados</h2>
-            <p id="tabla" name="tabla">:D</p>
+            <p id="tabla" name="tabla"></p>
+            <br><br>
+        </center>
+        </center>
+        <hr><br><br>
+        <button onclick="borrar()">Borrar Registros</button>
+        <center>
+            <a >Total General: </a>
+            <a id="TotGeneral"> </a>
         </center>
        
     </section>
