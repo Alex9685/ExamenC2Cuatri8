@@ -138,4 +138,10 @@ function Mover(Origen){
     }
     
 
+    function borrar(){
+        let parrafo=document.getElementById('tabla');
+        let totg= document.getElementById('TotGeneral');
+        totg.innerHTML="";
+        parrafo.innerHTML="<br><br>";
+    }
    
